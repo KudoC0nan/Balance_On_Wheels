@@ -8,4 +8,6 @@ Our second design was modeled in the same way and modified from there accordingl
 <p>The old leg design contained unneccesary curves which pu strain on their structure. Along with that the joints in the old design were not proper as well</p>
 <image src="assets\Pic2.png"><br>
 <p>Along with eliminating the curves, a sandwich leg design is implemented</p>
-<image src="assets\Pic3.png"><br>
+<image src="assets\bot.png"><br>
+<p>New design with Flat casing</p>
+<image src="assets\Top.png"><br>  

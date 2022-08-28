@@ -10,6 +10,8 @@ Our second design was modeled in the same way and modified from there accordingl
 <image src="assets\Pic2.png"><br>
   <p>The motor used for this project is the N20 motor</p>
   <image src="assets\n20.png"><br>
+    <p>We went with wheel used in our Wall-E project as wheels for this bot</p>
+    <image src="assets\wheel.png"><br>
 <p>Along with eliminating the curves, a sandwich leg design is implemented</p>
 <image src="assets\bot.png"><br>
 <p>New design with Flat casing</p>

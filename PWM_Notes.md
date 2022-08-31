@@ -21,6 +21,5 @@ Set motor speed<br>
 
 
 ---
-## Normal and Parallel Mode of Duty driver
-- ### Normal Mode:
+
   

@@ -114,22 +114,33 @@ void app_main(void)
     Program execution begins with app_main(), just like our good old main()
 
 2] `vTaskDelay()`
-    This function helps us delay a task by a specified amount of time.The actual time that the task remains blocked depends on the tick rate.The constant `portTICK_PERIOD_MS` can be used to calculate real time from the tick rate - with the resolution of one tick period.
     
-    Example :
-    vTaskDelay(1000 / portTICK_PERIOD_MS)
-    PortTICK_PERIOD_MS = 10ms
-    1000 / portTICK_PERIOD_MS = 100 ticks
-    100 * 10ms = 1 sec
-    Therefore a delay of 1 sec.
+This function helps us delay a task by a specified amount of time.The actual time that the task remains blocked depends on the tick rate.The constant `portTICK_PERIOD_MS` can be used to calculate real time from the tick rate - with the resolution of one tick period.
+    
+**Syntax**
+void vTaskDelay(const TickType_t xTicksToDelay)
 
+**Parameters**
+xTicksToDelay : The amount of time, in tick periods, that the calling task should block.
+
+**Example**
+vTaskDelay(1000 / portTICK_PERIOD_MS)
+PortTICK_PERIOD_MS = 10ms
+1000 / portTICK_PERIOD_MS = 100 ticks
+100 * 10ms = 1 sec
+Therefore a delay of 1 sec.
+    
 3] `nvs_flash_init()`
     ESP-32 modules run code from external flash.Unless youre using the ESP-32 chip, the module/board maker will take care of the flash initialization and access.
     Non-volatile storage (NVS) library is designed to store key-value pairs in flash.
 
 4] `xTaskCreate()`
+
 Create a new task and add it to the list of tasks that are ready to run.
 Each task requires RAM that is used to hold the task state, and used by the task as its stack. If a task is created using xTaskCreate() then the required RAM is automatically allocated from the FreeRTOS heap. 
+
+**Syntax**
+`static BaseType_t xTaskCreate(TaskFunction_t pvTaskCode, const char *constpcName, const uint32_t usStackDepth, void *constpvParameters, UBaseType_t uxPriority, TaskHandle_t *constpvCreatedTask)`
 
 Example:
 ``` C
@@ -140,6 +151,25 @@ void app_main()
 
 }
 ```
+
+**Parameters**
+
+pvTaskCode: Pointer to the task entry function. Tasks must be implemented to never return (i.e. continuous loop), or should be terminated using vTaskDelete function.
+
+pcName: A descriptive name for the task. This is mainly used to facilitate debugging. Max length defined by configMAX_TASK_NAME_LEN - default is 16.
+
+usStackDepth : The size of the task stack specified as the number of bytes. Note that this differs from vanilla FreeRTOS.
+
+pvParameters: Pointer that will be used as the parameter for the task being created.
+
+uxPriority : The priority at which the task should run. Systems that include MPU support can optionally create tasks in a privileged (system) mode by setting bit portPRIVILEGE_BIT of the priority parameter. For example, to create a privileged task at priority 2 the uxPriority parameter should be set to ( 2 | portPRIVILEGE_BIT ).
+
+pvCreatedTask: Used to pass back a handle by which the created task can be referenced.
+
+**Returns** 
+pdPASS if the task was successfully created and added to a ready list, otherwise an error code defined in the file projdefs.h
+
+**Explanation**
 This function takes 5 arguments. Forget the NULL ones for now. The first parameter is address of the function which execute, when this task is scheduled to run!. The second parameter hello_task is the name given to the task and this could be any name. It used to obtain handle or while debugging the task. The next parameter 2048 is the memory allocated to the task in word (2 Bytes).The next paramater is task priority.
 
 5]`fflush(stdout)`

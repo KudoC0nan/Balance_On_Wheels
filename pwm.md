@@ -1,4 +1,4 @@
-#PWM (Pulse Width Modulation)
+# PWM (Pulse Width Modulation)
 ---
 **Pulse-width modulation (PWM)**, or pulse-duration modulation (PDM), is a method of reducing the average power delivered by an electrical signal, by effectively chopping it up into discrete parts. 
 Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. 
@@ -20,7 +20,7 @@ It is the percentage of the time period when the signal remains ON during the pe
 **Period** 
 It is the sum of off-time and on-time of pulse width modulation signal.
 
-##Duty Cycle
+## Duty Cycle
 Duty cycle is the ratio of time a load or circuit is ON compared to the time the load or circuit is OFF. Duty cycle, sometimes called "duty factor," is expressed as a percentage of ON time. 
 ![](https://camo.githubusercontent.com/ff24881def52dcfe06c2fe38945f2f2a1f5586d855961978afc7b0cd8d95d31d/68747470733a2f2f7777772e6a61766174706f696e742e636f6d2f656d62656464656473797374656d2f696d616765732f70776d2d6176722d6d6963726f636f6e74726f6c6c6572322e706e67)
 
@@ -48,9 +48,10 @@ Period is a sum of both on and off times and period is calculated as shown in th
     (The speed of a DC motor can be controlled by varying its input voltage, i.e. by using PWM.The higher the duty cycle, the greater the average voltage being applied to the dc motor(High Speed) and the lower the duty cycle, the less the average voltage being applied to the dc motor(Low Speed)).
 
 7] Pulse Width Modulation is used as a Volatge Regulator
+
 ![](https://camo.githubusercontent.com/b634e2d938e75c025364d39dd1b4f567b59594be6f4abdc9106a8078485d0b37/68747470733a2f2f7777772e6a61766174706f696e742e636f6d2f656d62656464656473797374656d2f696d616765732f70776d2d6176722d6d6963726f636f6e74726f6c6c6572342e706e67)
 
-##Types of PWM
+## Types of PWM
 **1] Light Emitting Diode PWM (LEDPWM)**
 LEDPWM has low and high speed mode and provides low (8-bit) resolution.
 
@@ -177,14 +178,16 @@ void app_main()
 	xTaskCreate(&pwm_task, "pwm_task", 4096, NULL, 1, NULL);
 }
 ```
-##Expalanation
+## Expalanation
+
 In `components/sra-board-component/src/motor_driver.c` you can see that the frequency is set to be 20KHz.
 In the example duty cycle goes from 60 to 100 and then 0 and then from 60 to 100 in opposite direction for both  the modes.
 For one pulse it takes 1/20 KHz secs i.e. 5x10^-5 sec (50 µs) 60% duty cycle means it will be on for 3x10^-5 sec  (30 µs ) and off for 100/(80 x 10^-6 ) i.e 1.25 µs + 20 µs .In the next iteration the value of duty cycle increases and in the last it becomes 100 % which means that signal is high for 5  µs and then a delay again for 1.25 µs. Same in opposite direction.
 
 ---
 
-##Header Files
+## Header Files
+
 1] `#include<math.h>`
 The math.h header defines various mathematical functions and one macro. 
 2] `#include <time.h>`
@@ -198,7 +201,8 @@ Includes components of Sra Board
 6] `#define MODE NORMAL_MODE`
 Defining a macro, mode as normal_mode
 
-##Functions
+## Functions
+
 1] `enable_motor_driver(a,NORMAL_MODE) or enable_motor_driver(a,NORMAL_MODE)`
 
 `esp_err_t enable_motor_driver_a(int mode)`	
@@ -274,7 +278,8 @@ A Motor driver can control 2 motors. In normal mode motor driver controls 2 moto
 Whereas in parallel mode the motor driver controls a single motor giving a max current capacity of 2.4A to single motor
 Parallel mode is used for motors which require high current (Motors with Heavy Current Consumption)
 
-##Motor Driver 
+## Motor Driver 
+
 In our SRA Board we are using **TB6612FNG Motor Driver**.
 ![](https://lh4.googleusercontent.com/c4yAOR6bwPdzkB7Vy_ZfZecTnRTRjpjSXafJke_YRI2AxcxWPJC5mCWQ-lXbNGtt3lFq8ZOLJbpG92QkjNNW73PEd0t7KCF5wmH0kb4j836he4sVg0OHyJoonkHLrbGXm_kxfBEorD1ngSxLxb5vxnfT1ZxlCiCLkIqVAWNVGQggyGwhfX5DEsr0LqvR-G9g4UatKg)
 
@@ -283,7 +288,7 @@ Their function  is to take a low-current control signal, and turn it into a  pro
 
 The TB6612FNG H-Bridge is a small and inexpensive dual-channel H-Bridge controller. In this type of motor driver all of the input pins are on one side and all of the output and power pins are on the other side.  
 
-##Minimum Duty Cycle Required
+## Minimum Duty Cycle Required
 
 Minimum Duty Cycle required for rotation of single or both motor is around 50-55% Duty Cycle.
 Minimum Duty Cycle is required to overcome the Frictional Forces (Static).

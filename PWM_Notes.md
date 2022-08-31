@@ -3,7 +3,7 @@
 These have a continuously varying value and a huge resolution.<br>
 Also as it takes many values the power consumption is very high and circuits might become hot.<br>
 Unlike analog signals, digital signals are not continuous, but signals are discrete in value and time. These signals are represented by binary<br> numbers and consist of different voltage</p>
-![What-are-Analog-and-Digital-Signals](https://instrumentationtools.com/wp-content/uploads/2021/04/What-are-Analog-and-Digital-Signals.png?ezimgfmt=ng:webp/ngcb1) 
+![What-are-Analog-and-Digital-Signals](https://instrumentationtools.com/wp-content/uploads/2021/04/What-are-Analog-and-Digital-Signals.png?ezimgfmt=ng:webp/ngcb1)
 
 ---
 
@@ -20,3 +20,7 @@ Set motor speed<br>
 **mcpwm_set_duty_type()** -- Call this function every time after mcpwm_set_signal_high or mcpwm_set_signal_low to resume with previously set duty cycle
 
 
+---
+## Normal and Parallel Mode of Duty driver
+- ### Normal Mode:
+  

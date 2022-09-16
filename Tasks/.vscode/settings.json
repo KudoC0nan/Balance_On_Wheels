@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "sra_board.h": "c",
+        "pin_defs.h": "c",
+        "stdio.h": "c"
+    }
+}

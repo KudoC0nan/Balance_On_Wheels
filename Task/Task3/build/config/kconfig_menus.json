@@ -627,16 +627,6 @@
                 "range": null,
                 "title": "Reserve RTC FAST memory for custom purposes",
                 "type": "bool"
-            },
-            {
-                "children": [],
-                "depends_on": null,
-                "help": "Perform the startup flow recommended by XMC. Please consult XMC for the details of this flow.\nXMC chips will be forbidden to be used, when this option is disabled.\n\nDON'T DISABLE THIS UNLESS YOU KNOW WHAT YOU ARE DOING.",
-                "id": "BOOTLOADER_FLASH_XMC_SUPPORT",
-                "name": "BOOTLOADER_FLASH_XMC_SUPPORT",
-                "range": null,
-                "title": "Enable the support for flash chips of XMC (READ HELP FIRST)",
-                "type": "bool"
             }
         ],
         "depends_on": null,
@@ -7027,16 +7017,6 @@
                         "type": "bool"
                     },
                     {
-                        "children": [],
-                        "depends_on": "BLE_MESH",
-                        "help": "This option is used to decide whether discarding the old SeqAuth when\nreceiving a segmented message.",
-                        "id": "BLE_MESH_DISCARD_OLD_SEQ_AUTH",
-                        "name": "BLE_MESH_DISCARD_OLD_SEQ_AUTH",
-                        "range": null,
-                        "title": null,
-                        "type": "bool"
-                    },
-                    {
                         "children": [
                             {
                                 "children": [
@@ -11327,59 +11307,33 @@
                         "id": "FMB_TIMER_PORT_ENABLED",
                         "name": "FMB_TIMER_PORT_ENABLED",
                         "range": null,
-                        "title": "Modbus stack use timer for 3.5T symbol time measurement",
+                        "title": "Modbus slave stack use timer for 3.5T symbol time measurement",
                         "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Modbus slave Timer group number that is used for timeout measurement.",
+                        "help": "Modbus Timer group number that is used for timeout measurement.",
                         "id": "FMB_TIMER_GROUP",
                         "name": "FMB_TIMER_GROUP",
                         "range": [
                             0,
                             1
                         ],
-                        "title": "Slave Timer group number",
+                        "title": "Modbus Timer group number",
                         "type": "int"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Modbus slave Timer Index in the group that is used for timeout measurement.",
+                        "help": "Modbus Timer Index in the group that is used for timeout measurement.",
                         "id": "FMB_TIMER_INDEX",
                         "name": "FMB_TIMER_INDEX",
                         "range": [
                             0,
                             1
                         ],
-                        "title": "Slave Timer index in the group",
-                        "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Modbus master Timer group number that is used for timeout measurement.",
-                        "id": "FMB_MASTER_TIMER_GROUP",
-                        "name": "FMB_MASTER_TIMER_GROUP",
-                        "range": [
-                            0,
-                            1
-                        ],
-                        "title": "Master Timer group number",
-                        "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Modbus master Timer Index in the group that is used for timeout measurement.\nNote: Modbus master and slave should have different timer index to be able to work simultaneously.",
-                        "id": "FMB_MASTER_TIMER_INDEX",
-                        "name": "FMB_MASTER_TIMER_INDEX",
-                        "range": [
-                            0,
-                            1
-                        ],
-                        "title": "Master Timer index",
+                        "title": "Modbus Timer index in the group",
                         "type": "int"
                     },
                     {
@@ -14985,7 +14939,7 @@
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Enable this flag to use patched versions of SPI flash ROM driver functions.\nThis option should be enabled, if any one of the following is true: (1) need to write\nto flash on ESP32-D2WD; (2) main SPI flash is connected to non-default pins; (3) main\nSPI flash chip is manufactured by ISSI.",
+                        "help": "Enable this flag to use patched versions of SPI flash ROM driver functions.\nThis option is needed to write to flash on ESP32-D2WD, and any configuration\nwhere external SPI flash is connected to non-default pins.",
                         "id": "SPI_FLASH_ROM_DRIVER_PATCH",
                         "name": "SPI_FLASH_ROM_DRIVER_PATCH",
                         "range": null,
@@ -15854,6 +15808,65 @@
                         "children": [
                             {
                                 "children": [],
+                                "depends_on": "ROSSERIAL_OVER_WIFI",
+                                "help": "SSID (Access point name) of WiFi to connect",
+                                "id": "ROSSERVER_AP",
+                                "name": "ROSSERVER_AP",
+                                "range": null,
+                                "title": "WiFi SSID",
+                                "type": "string"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "ROSSERIAL_OVER_WIFI",
+                                "help": "Password of the WiFi",
+                                "id": "ROSSERVER_PASS",
+                                "name": "ROSSERVER_PASS",
+                                "range": null,
+                                "title": "WiFi Password",
+                                "type": "string"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "ROSSERIAL_OVER_WIFI",
+                                "help": "IP address of machine which is running rosserial server",
+                                "id": "ROSSERVER_IP",
+                                "name": "ROSSERVER_IP",
+                                "range": null,
+                                "title": "IP address of ROS server (roscore)",
+                                "type": "string"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "ROSSERIAL_OVER_WIFI",
+                                "help": "Port number of rosserial server\n\nPort number is printed on terminal running rosserial_python",
+                                "id": "ROSSERVER_PORT",
+                                "name": "ROSSERVER_PORT",
+                                "range": null,
+                                "title": "Port number of ROS server",
+                                "type": "int"
+                            }
+                        ],
+                        "depends_on": null,
+                        "help": "Use rosserial over WiFi using TCP",
+                        "id": "ROSSERIAL_OVER_WIFI",
+                        "name": "ROSSERIAL_OVER_WIFI",
+                        "range": null,
+                        "title": "rosserial over WiFi using TCP",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-mario-rosserial",
+                "title": "MARIO-Rosserial",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
                                 "depends_on": null,
                                 "help": null,
                                 "id": "I2CDEV_TIMEOUT",
@@ -16005,44 +16018,6 @@
                                 "depends_on": null,
                                 "id": "component-config-sra-board-component-config-servo-motor-configuration-servo-c",
                                 "title": "Servo C",
-                                "type": "menu"
-                            },
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": null,
-                                        "help": "sets the servo-D minimum pulsewidth",
-                                        "id": "SERVO_D_MIN_PULSEWIDTH",
-                                        "name": "SERVO_D_MIN_PULSEWIDTH",
-                                        "range": null,
-                                        "title": "servo-D minimum pulsewidth",
-                                        "type": "int"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": null,
-                                        "help": "sets the servo-D maximum pulsewidth",
-                                        "id": "SERVO_D_MAX_PULSEWIDTH",
-                                        "name": "SERVO_D_MAX_PULSEWIDTH",
-                                        "range": null,
-                                        "title": "servo-D maximum pulsewidth",
-                                        "type": "int"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": null,
-                                        "help": "sets the servo-D max degree",
-                                        "id": "SERVO_D_MAX_DEGREE",
-                                        "name": "SERVO_D_MAX_DEGREE",
-                                        "range": null,
-                                        "title": "servo-D max degree",
-                                        "type": "int"
-                                    }
-                                ],
-                                "depends_on": null,
-                                "id": "component-config-sra-board-component-config-servo-motor-configuration-servo-d",
-                                "title": "Servo D",
                                 "type": "menu"
                             }
                         ],

@@ -1,9 +1,0 @@
-CMake Error at /home/shreyas/esp/esp-idf/tools/cmake/build.cmake:245 (message):
-  Failed to resolve component 'sra-board-component'.
-Call Stack (most recent call first):
-  /home/shreyas/esp/esp-idf/tools/cmake/build.cmake:281 (__build_resolve_and_add_req)
-  /home/shreyas/esp/esp-idf/tools/cmake/build.cmake:574 (__build_expand_requirements)
-  /home/shreyas/esp/esp-idf/tools/cmake/project.cmake:440 (idf_build_process)
-  CMakeLists.txt:6 (project)
-
-

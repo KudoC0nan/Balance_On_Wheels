@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/build/esp-idf/soc/src/esp32/cmake_install.cmake")
-  include("/home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/build/esp-idf/soc/soc/cmake_install.cmake")
+  include("/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/esp-idf/soc/src/esp32/cmake_install.cmake")
+  include("/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/esp-idf/soc/soc/cmake_install.cmake")
 
 endif()
 

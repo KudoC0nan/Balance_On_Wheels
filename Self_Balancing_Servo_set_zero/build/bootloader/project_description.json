@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "/home/arsh/esp/esp-idf/components/bootloader/subproject",
-    "build_dir":          "/home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/build/bootloader",
-    "config_file":        "/home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/sdkconfig",
+    "build_dir":          "/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader",
+    "config_file":        "/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",

@@ -66,5 +66,3 @@ $<TARGET_FILE:__idf_unity>
 $<TARGET_FILE:__idf_wifi_provisioning>
 $<TARGET_FILE:__idf_main>
 $<TARGET_FILE:__idf_websocket>
-$<TARGET_FILE:__idf_sra-board-component>
-$<TARGET_FILE:__idf_rosserial_esp32>

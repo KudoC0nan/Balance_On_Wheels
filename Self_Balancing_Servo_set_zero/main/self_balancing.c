@@ -11,7 +11,7 @@
 
 #define MODE NORMAL_MODE
 
-#define MAX_PWM (100.0f)
+#define MAX_PWM (80.0f)
 #define MIN_PWM (60.0f)
 
 // static const char* TAG = "Self_Balance";
@@ -103,7 +103,15 @@ void motor_command(float abs_pitch_correction,float pitch_error,float *motor_cmd
 	}
 
 	ESP_LOGI(TAG,"KP : %f , KI : %f , KD : %f",read_pid_const().kp,read_pid_const().ki,read_pid_const().kd);
-
+	#ifdef CONFIG_ENABLE_OLED
+				// Diplaying kp, ki, kd values on OLED
+				if (read_pid_const().val_changed)
+				{
+					display_pid_values(read_pid_const().kp, read_pid_const().ki, read_pid_const().kd, &oled_config);
+					reset_val_changed_pid_const();
+				}
+	#endif				
+	vTaskDelay(10 / portTICK_PERIOD_MS);
 }
 
 void balance_task(void *arg)
@@ -120,6 +128,14 @@ void balance_task(void *arg)
 	float pitch_cmd = 0.0f;
 
 	float abs_pitch_correction = 0.0f;
+
+	#ifdef CONFIG_ENABLE_OLED
+	// Declaring the required OLED struct
+    u8g2_t oled_config;
+
+    // Initialising the OLED
+    ESP_ERROR_CHECK(init_oled(&oled_config));
+	#endif
 	
 	// initialisation of mpu6050
 	if(enable_mpu6050() == ESP_OK)

@@ -1,1 +1,13 @@
-a3374b2d2f1821db7f3907d91f3cfbf6a4c320b5
+0000000000000000000000000000000000000000 bbc9905eeb6dd4d28b04c33c179e0b339d145c25 Arsh Khan <khanarsh0124@gmail.com> 1661670577 +0530	branch: Created from HEAD
+bbc9905eeb6dd4d28b04c33c179e0b339d145c25 29d18464a42adc210c8880e0e5df82da349262c6 Arsh Khan <khanarsh0124@gmail.com> 1661696875 +0530	commit: GPIO Notes
+29d18464a42adc210c8880e0e5df82da349262c6 3db8ecf2af5fd2985b1da4c173ca9b739f5e73d9 Arsh Khan <khanarsh0124@gmail.com> 1661696917 +0530	commit: Led Blink Notes
+3db8ecf2af5fd2985b1da4c173ca9b739f5e73d9 9269c44b4daacc3ceb73cc23237de705b1ee94f7 Arsh Khan <khanarsh0124@gmail.com> 1661845259 +0530	commit: Hello World Notes
+9269c44b4daacc3ceb73cc23237de705b1ee94f7 f80e8b7df0ccc2952253bb07105ef4e5639d5923 Arsh Khan <khanarsh0124@gmail.com> 1661973954 +0530	commit: Updated Hello World Notes (Updated xTaskCreate() and vTaskDelay() content)
+f80e8b7df0ccc2952253bb07105ef4e5639d5923 7eafb8c790fb89859ab483076b1fe3516b534284 Arsh Khan <khanarsh0124@gmail.com> 1661974005 +0530	commit: PWM Notes
+7eafb8c790fb89859ab483076b1fe3516b534284 d80642fbef710741fd0e3c022852077a565f31f0 Arsh Khan <khanarsh0124@gmail.com> 1661974430 +0530	commit: PWM Notes
+d80642fbef710741fd0e3c022852077a565f31f0 7dfba399b79d2e1d8fed1ac238864f0888d2b624 Arsh Khan <khanarsh0124@gmail.com> 1663267618 +0530	commit: Task 1
+7dfba399b79d2e1d8fed1ac238864f0888d2b624 747b03dbf7cd47831219da8a0181af5c5581c8a9 Arsh Khan <khanarsh0124@gmail.com> 1663410843 +0530	commit: Added Task4
+747b03dbf7cd47831219da8a0181af5c5581c8a9 4ee4039ae70821fb3ff20413500addfbf77e3225 Arsh Khan <khanarsh0124@gmail.com> 1663419940 +0530	commit: Task 3
+4ee4039ae70821fb3ff20413500addfbf77e3225 242a2ae79f1392fb6b176f020d661f55fe951081 Arsh Khan <khanarsh0124@gmail.com> 1663420149 +0530	commit: Task2
+242a2ae79f1392fb6b176f020d661f55fe951081 7432460ad370331824cde63e1b6fc1c99d33020c Arsh Khan <khanarsh0124@gmail.com> 1663421616 +0530	commit: Self Balancing Code
+7432460ad370331824cde63e1b6fc1c99d33020c 8b8f6187479728ae3753b1b42786260164fd22e5 Arsh Khan <khanarsh0124@gmail.com> 1663442684 +0530	commit: Self Balancing code running simultaneously with servo set zero code

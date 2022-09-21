@@ -1,4 +1,4 @@
-# Install script for directory: /home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/main
+# Install script for directory: /home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

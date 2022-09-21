@@ -1048,57 +1048,6 @@ CONFIG_WEBSOCKET_SERVER_TASK_STACK_DEPTH=6000
 CONFIG_WEBSOCKET_SERVER_TASK_PRIORITY=5
 # CONFIG_WEBSOCKET_SERVER_PINNED is not set
 # end of WebSocket Server
-
-#
-# MARIO-Rosserial
-#
-# CONFIG_ROSSERIAL_OVER_WIFI is not set
-# end of MARIO-Rosserial
-
-#
-# SRA Board Component Config
-#
-
-#
-# I2C
-#
-CONFIG_I2CDEV_TIMEOUT=1000
-# CONFIG_I2CDEV_NOLOCK is not set
-# end of I2C
-
-# CONFIG_ENABLE_OLED is not set
-
-#
-# Servo motor configuration
-#
-
-#
-# Servo A
-#
-CONFIG_SERVO_A_MIN_PULSEWIDTH=500
-CONFIG_SERVO_A_MAX_PULSEWIDTH=3000
-CONFIG_SERVO_A_MAX_DEGREE=180
-# end of Servo A
-
-#
-# Servo B
-#
-CONFIG_SERVO_B_MIN_PULSEWIDTH=500
-CONFIG_SERVO_B_MAX_PULSEWIDTH=3000
-CONFIG_SERVO_B_MAX_DEGREE=180
-# end of Servo B
-
-#
-# Servo C
-#
-CONFIG_SERVO_C_MIN_PULSEWIDTH=500
-CONFIG_SERVO_C_MAX_PULSEWIDTH=3000
-CONFIG_SERVO_C_MAX_DEGREE=180
-# end of Servo C
-# end of Servo motor configuration
-
-CONFIG_NUMBER_OF_SAMPLES=64
-# end of SRA Board Component Config
 # end of Component config
 
 #

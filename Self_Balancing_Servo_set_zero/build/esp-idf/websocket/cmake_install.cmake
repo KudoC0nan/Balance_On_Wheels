@@ -1,4 +1,4 @@
-# Install script for directory: /home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/components/websocket
+# Install script for directory: /home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/components/websocket
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-/* * Data converted from /home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/frontend/index.html
+/* * Data converted from /home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/frontend/index.html
  */
 .data
 .section .rodata.embedded

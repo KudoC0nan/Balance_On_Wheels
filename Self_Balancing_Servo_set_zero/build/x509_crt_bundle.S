@@ -1,4 +1,4 @@
-/* * Data converted from /home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

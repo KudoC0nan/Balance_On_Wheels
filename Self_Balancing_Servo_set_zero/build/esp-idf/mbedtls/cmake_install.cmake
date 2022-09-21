@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/arsh/Self-Balancing-Robot_Code/Self_Balancing_Servo_set_zero/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 
 endif()
 

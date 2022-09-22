@@ -1,0 +1,103 @@
+menu "SRA Board Component Config"
+
+menu "I2C"
+
+config I2CDEV_TIMEOUT
+    int "I2C transaction timeout, milliseconds"
+    default 1000
+    range 100 5000
+    
+config I2CDEV_NOLOCK
+	bool "Disable the use of mutexes"
+	default n
+	help
+		Attention! After enabling this option, all I2C device
+		drivers will become non-thread safe. 
+		Use this option if you need to access your I2C devices
+		from interrupt handlers. 
+
+endmenu
+
+config ENABLE_OLED
+    bool "Enable OLED"
+    default n
+    help
+        Enables OLED support on SRA Board
+
+menu "Servo motor configuration"
+
+menu "Servo A"
+
+config SERVO_A_MIN_PULSEWIDTH
+    int "servo-A minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-A minimum pulsewidth
+
+config SERVO_A_MAX_PULSEWIDTH
+    int "servo-A maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-A maximum pulsewidth
+
+config SERVO_A_MAX_DEGREE
+    int "servo-A max degree"
+    default 180
+    help 
+        sets the servo-A max degree
+
+endmenu
+
+menu "Servo B"
+
+config SERVO_B_MIN_PULSEWIDTH
+    int "servo-B minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-B minimum pulsewidth
+
+config SERVO_B_MAX_PULSEWIDTH
+    int "servo-B maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-B maximum pulsewidth
+
+config SERVO_B_MAX_DEGREE
+    int "servo-B max degree"
+    default 180
+    help 
+        sets the servo-B max degree
+
+endmenu
+
+menu "Servo C"
+
+config SERVO_C_MIN_PULSEWIDTH
+    int "servo-C minimum pulsewidth"
+    default 500
+    help 
+        sets the servo-C minimum pulsewidth
+
+config SERVO_C_MAX_PULSEWIDTH
+    int "servo-C maximum pulsewidth"
+    default 3000
+    help 
+        sets the servo-C maximum pulsewidth
+
+config SERVO_C_MAX_DEGREE
+    int "servo-C max degree"
+    default 180
+    help 
+        sets the servo-C max degree
+
+endmenu
+
+endmenu
+
+config NUMBER_OF_SAMPLES
+    int "Number of samples for multisampling ADC values to use with LSA"
+    default 64
+    help
+        sets the number of ADC samples to average to use with LSA
+
+endmenu

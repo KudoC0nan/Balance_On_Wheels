@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/shreyas/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/shreyas/Balance_On_Wheels/examples/Setzero/build/bootloader",
+    "config_file":        "/home/shreyas/Balance_On_Wheels/examples/Setzero/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.2.4-10-ged22f22632",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/shreyas/esp/esp-idf/components/efuse/Kconfig;/home/shreyas/esp/esp-idf/components/esp32/Kconfig;/home/shreyas/esp/esp-idf/components/esp_common/Kconfig;/home/shreyas/esp/esp-idf/components/log/Kconfig;/home/shreyas/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/shreyas/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/shreyas/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/shreyas/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/shreyas/esp/esp-idf/components/bootloader", "/home/shreyas/esp/esp-idf/components/bootloader_support", "/home/shreyas/esp/esp-idf/components/efuse", "/home/shreyas/esp/esp-idf/components/esp32", "/home/shreyas/esp/esp-idf/components/esp_common", "/home/shreyas/esp/esp-idf/components/esp_rom", "/home/shreyas/esp/esp-idf/components/esptool_py", "/home/shreyas/esp/esp-idf/components/log", "/home/shreyas/esp/esp-idf/components/bootloader/subproject/main", "/home/shreyas/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/shreyas/esp/esp-idf/components/partition_table", "/home/shreyas/esp/esp-idf/components/soc", "/home/shreyas/esp/esp-idf/components/spi_flash", "/home/shreyas/esp/esp-idf/components/xtensa", "" ]
+}

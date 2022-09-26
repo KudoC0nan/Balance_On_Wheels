@@ -42,34 +42,100 @@ servo_config servo_d = {
 	.gen = MCPWM_OPR_B,
 };
 
+#ifdef CONFIG_ENABLE_OLED
+// Declaring the required OLED struct
+u8g2_t oled_config;
+
+void update_oled()
+{
+	// Diplaying Servo A, Servo B, Servo C, Servo D values on OLED
+	while (1)
+	{
+		display_servo_values(read_servo(&servo_a), read_servo(&servo_b), read_servo(&servo_c), read_servo(&servo_d), &oled_config);
+	}
+}
+
+#endif
+
 static void mcpwm_servo_control(void *arg)
 {
 	enable_servo();
-#ifdef CONFIG_ENABLE_OLED
-	// Declaring the required OLED struct
-	u8g2_t oled_config;
 
-	// Initialising the OLED
-	ESP_ERROR_CHECK(init_oled(&oled_config));
-	display_mario_logo(&oled_config);
-	vTaskDelay(100);
-#endif
+	
+		// for (int i = 0; i < 130; i++)
+		// {
+		// 	set_angle_servo(&servo_a, i);
+		// 	set_angle_servo(&servo_b, i);
+		// 	set_angle_servo(&servo_c, i);
+		// 	set_angle_servo(&servo_d, i/2);
+		// 	vTaskDelay(5);
+		// }
 
-	while (1)
-	{
-		set_angle_servo(&servo_a, 0);
-		set_angle_servo(&servo_b, 70);
-		set_angle_servo(&servo_c, 70);
-		set_angle_servo(&servo_d, 0);
-#ifdef CONFIG_ENABLE_OLED
-		// Diplaying Servo A, Servo B, Servo C, Servo D values on OLED
-		display_servo_values(read_servo(&servo_a), read_servo(&servo_b), read_servo(&servo_c), read_servo(&servo_d), &oled_config);
-#endif
-	}
+		// for (int i = 130; i > 0; i--)
+		// {
+		// 	set_angle_servo(&servo_a, i);
+		// 	set_angle_servo(&servo_b, i);
+		// 	set_angle_servo(&servo_c, i);
+		// 	set_angle_servo(&servo_d, i/2);
+		// 	vTaskDelay(5);
+		// }
+		
+		// for (int i = 0,j=70; i<=70 && j>=0; i++,j--)
+		// {
+		// 	set_angle_servo(&servo_a, j);
+		// 	set_angle_servo(&servo_b, i);
+		// 	set_angle_servo(&servo_c, i);
+		// 	set_angle_servo(&servo_d, j);
+		// 	vTaskDelay(3);
+		// }
+		    set_angle_servo(&servo_a,70);
+			set_angle_servo(&servo_b, 0);
+			set_angle_servo(&servo_c, 0);
+			set_angle_servo(&servo_d, 70);
+			vTaskDelay(150);
+			set_angle_servo(&servo_a,0);
+			set_angle_servo(&servo_b, 70);
+			set_angle_servo(&servo_c, 70);
+			set_angle_servo(&servo_d, 0);
+			vTaskDelay(150);
+			set_angle_servo(&servo_a,40);
+			set_angle_servo(&servo_b, 30);
+			set_angle_servo(&servo_c, 30);
+			set_angle_servo(&servo_d, 40);
+			vTaskDelay(5);
+			set_angle_servo(&servo_a,0);
+			set_angle_servo(&servo_b, 70);
+			set_angle_servo(&servo_c, 70);
+			set_angle_servo(&servo_d, 0);
+			vTaskDelay(5);
+			set_angle_servo(&servo_a,50);
+			set_angle_servo(&servo_b, 20);
+			set_angle_servo(&servo_c, 20);
+			set_angle_servo(&servo_d, 50);
+			vTaskDelay(5);
+			set_angle_servo(&servo_a,0);
+			set_angle_servo(&servo_b, 70);
+			set_angle_servo(&servo_c, 70);
+			set_angle_servo(&servo_d, 0);
+			vTaskDelay(1);
+			set_angle_servo(&servo_a,70);
+			set_angle_servo(&servo_b, 0);
+			set_angle_servo(&servo_c, 0);
+			set_angle_servo(&servo_d, 70);
+
+			
 }
 
 void app_main()
 {
 	ESP_LOGD(TAG, "Testing servo motors\n");
-	xTaskCreate(mcpwm_servo_control, "mcpwm_example_servo_control", 4096, NULL, 5, NULL);
+
+#ifdef CONFIG_ENABLE_OLED
+	ESP_ERROR_CHECK(init_oled(&oled_config));
+	display_mario_logo(&oled_config);
+	vTaskDelay(100);
+	xTaskCreatePinnedToCore(update_oled, "update oled", 4096, NULL, 5, NULL, 0);
+#endif
+
+	xTaskCreatePinnedToCore(mcpwm_servo_control, "mcpwm_example_servo_control", 4096, NULL, 5, NULL, 1);
 }

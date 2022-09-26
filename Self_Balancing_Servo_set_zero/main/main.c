@@ -45,20 +45,46 @@ servo_config servo_d = {
 void servo_control(void *arg)
 {
 	enable_servo();
-
 	while (1)
 	{
-		set_angle_servo(&servo_a, 5);
+		set_angle_servo(&servo_a, 0);
 		vTaskDelay(100);
 		set_angle_servo(&servo_b, 70);
 		vTaskDelay(100);
-		set_angle_servo(&servo_c, 0);
+		set_angle_servo(&servo_c, 70);
 		vTaskDelay(100);
-		set_angle_servo(&servo_d, 65);
+		set_angle_servo(&servo_d, 0);
 		vTaskDelay(100);
 	}
 }
+
+// #include "sra_board.h"
+
+// #define TAG "MCPWM_SERVO_CONTROL"
+
+
+
+
+// void servo_control(void *arg)
+// {
+// 	enable_servo();
+// 	while (1)
+// 	{
+// 		set_angle_servo(&servo_a, 0);
+// 		set_angle_servo(&servo_b, 0);
+// 		set_angle_servo(&servo_c, 0);
+// 		set_angle_servo(&servo_d, 0);
+// 		vTaskDelay(5);
+// 	}
+// }
+
 void servo_config_setting()
 {
 	xTaskCreate(&servo_control,"servo control",4096,NULL,1,NULL);
 }
+
+// // void app_main()
+// // {
+
+// // 	xTaskCreatePinnedToCore(servo_control, "servo_control", 4096, NULL, 1, NULL, 1);
+// // }

@@ -268,7 +268,7 @@ This function helps us delay a task by a specified amount of time.The actual tim
     100 * 10ms = 1 sec
     Therefore a delay of 1 sec.
 
-#Normal Mode VS Parallel Mode
+# Normal Mode VS Parallel Mode
 ![](https://lh4.googleusercontent.com/Yv3qCGZtVGild_xhu-7YbwICoVbGVKMOUazREo9x8XTOBwO_2oFRM9ARHYODa1-IhzgiKYwG3ItA8IpvJg2ET8-cjon1qcczAtB2M7_KmEGrt2Wf3GVTITzqDjj9uw1mSumK55sDbt5xPoa6Yb-D-YcNs0NjKHxGlpvU_Yg3CMS-c-GSuXbLBKgibT-FFi00bYRLwQ)
  
 ![](https://lh3.googleusercontent.com/QM-oOXo9PcOdHIypK5IDG5iTDdUvYOg7PwdzQ_FNflTk0hloO4LpCJCyuWwUQUPyb8COjeZVmqLjWO42QLwTbpwd-YXriouBtlZ7cAPJc6xWHPhsgkg0YLwm98pPtnOL4TCjcq1QWV6QrVTNU_JA70xK7O9zEFDhOFk8vydocFzZlju0fS1niI6ObzADGy1_3T7VoQ)

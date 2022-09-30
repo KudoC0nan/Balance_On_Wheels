@@ -23,6 +23,10 @@ In this project, we will be building a two wheeled robot (with a hip and knee jo
 ---
 
 ---
+## CAD Designs
+---
+
+---
 
 ## Problems faced during Design
 ---

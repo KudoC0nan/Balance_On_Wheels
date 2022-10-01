@@ -16,7 +16,10 @@ In this project, we will be building a two wheeled robot (with a hip and knee jo
 ---
 ### Research Topics
 ---
-
+* **Kinematics**, Equations for determining different parameters of the bot [Notes] 
+* **Control Systems**, [Notes for the same] 
+* Understanding of **PWM**, ([Notes]())
+* Electronic Compoments of SRA board
 ---
 ### Equations used to derive Parameters of Bot
 ---
@@ -37,9 +40,10 @@ In this project, we will be building a two wheeled robot (with a hip and knee jo
 
 ---
 
-### Software used for Design
+### Software used
 ---
-
+* SolidWorks
+* Embedded C
 ---
 
 ## Components

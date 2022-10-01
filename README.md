@@ -4,43 +4,47 @@
 Modeling and Control of Two-Legged Wheeled Robot:
 In this project, we will be building a two wheeled robot (with a hip and knee joint) which can balance at variable heights including a provision for jumping.
 ---
-# Design
+### 1.Design
 ---
-## File Structure of Design
----
-
----
-## Description of Design
+### 2.File Structure of Design
 ---
 
 ---
-## Equations used to derive Parameters of Bot
+### Description of Design
 ---
 
 ---
-
-## Specifications of Bot
+### Research Topics
 ---
 
 ---
-## CAD Designs
+### Equations used to derive Parameters of Bot
 ---
 
 ---
 
-## Problems faced during Design
+### Specifications of Bot
+---
+
+---
+### CAD Designs
 ---
 
 ---
 
-## Software used for Design
+### Problems faced during Design
 ---
 
 ---
 
-# Components
+### Software used for Design
 ---
-## SRA BOARD
+
+---
+
+## Components
+---
+### SRA BOARD
 ---
 SRA-Dev-Board is a PCB (Printed Circuit Board) designed by our SRA team.
 ![SRA Development Board]()
@@ -56,48 +60,48 @@ OLED and servo motor breakouts
 
 ---
 
-# PWM (Pulse Width Modulation)
+### PWM (Pulse Width Modulation)
 ---
 
 ---
 
-# PID
+### PID
 ---
 
 ---
 
-# File Structure of Code
+### File Structure of Code
 ---
 
 ---
 
-# Self Balancing Code Explanation
+### Self Balancing Code Explanation
 ---
 
 ---
 
-# Jumping Code Explanation
+### Jumping Code Explanation
 ---
 
 ---
 
-# Problems faced during Coding
+### Problems faced during Coding
 ---
 
 ---
 
-# Problems faced after Design (On Hardware Bot)
+### Problems faced after Design (On Hardware Bot)
 ---
 
 
 ---
 
-# Future Implementation of Project
+### Future Implementation of Project
 ---
 
 ---
 
-# Conclusion
+### Conclusion
 ---
 
 

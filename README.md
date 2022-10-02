@@ -1,41 +1,35 @@
 ![](https://i.imgur.com/V6Vat3e.jpg)
 
-# About The Project
+## About The Project
 Modeling and Control of Two-Legged Wheeled Robot:
 In this project, we will be building a two wheeled robot (with a hip and knee joint) which can balance at variable heights including a provision for jumping.
----
-# Design
----
+
+## Design
+
 ## File Structure of Design
----
 
----
 ## Description of Design
----
 
----
 ## Equations used to derive Parameters of Bot
----
 
----
 
 ## Specifications of Bot
----
-
----
+    Max Height Of Bot is 13cm
+    Min Height Of Bot is 4cm
 
 ## Problems faced during Design
----
 
----
+* First design had Curves which reduced the integrity of the structure which were then removed in the 2nd Iteration.
+* Gears, were removed from the design, considering much was lost due to the gear mechanism. Instead, MG90s servos were used.
+* Length of legs and distance from the AOS were reconsidered many times.
+* Base plate of the bot had some design flaws regarding placement of holes for servos and mpu.
 
 ## Software used for Design
----
 
----
+* [SOLIDWORKS](https://www.solidworks.com/) To Design the Bot
+* Embedded C
 
-# Components
----
+## Components
 
 **SRA BOARD**
 SRA-Dev-Board is a PCB (Printed Circuit Board) designed by our SRA team.
@@ -51,7 +45,6 @@ The SRA-dev-Board includes :
 
 [SRA Board CAD Design](https://github.com/SRA-VJTI/sra-board-hardware-design)
 
----
 
 **ESP-32 Microcontroller**
 ![](https://i.imgur.com/qfL7c7m.jpg)
@@ -114,9 +107,8 @@ MG90S is a micro servo motor with metal gear. This small and lightweight servo c
 
 [More on Servo Motor](https://github.com/KudoC0nan/Balance_On_Wheels/blob/dev_shreyas/Servo_Motor.md)
 
----
+
 # PWM (Pulse Width Modulation)
----
 
 **Pulse-width modulation (PWM)**, or pulse-duration modulation (PDM), is a method of reducing the average power delivered by an electrical signal, by effectively chopping it up into discrete parts.
 
@@ -142,10 +134,10 @@ It is the sum of off-time and on-time of pulse width modulation signal.
 
 [More on PWM](https://github.com/KudoC0nan/Balance_On_Wheels/blob/dev_arsh/Notes/pwm.md)
 
----
 
-# PID Control
----
+
+## PID Control
+
 The "PID" in "PID Control" stands for **"Proportional, Integral, Derivative"**. These three terms describe the basic elements of a PID controller. Each of these elements performs a different task and has a different effect on the functioning of a system and it is one kind of device used to control different process variables like pressure, flow, temperature, and speed in industrial applications. 
 
 **Basic Working Of PID Controller**
@@ -382,21 +374,19 @@ And all the above functions continues to execute again in a loop for achieving t
 
 [Link to Self Balancing Code](https://github.com/KudoC0nan/Balance_On_Wheels/tree/dev_arsh/Examples/Self_Balance_Code)
 
----
 
 # Jumping Code Explanation
----
-
----
-
-# Problems faced after Design (On Hardware Bot)
----
 
 
----
+# Problems faced and Troubleshooting
+* 1) N20 heating up within few moments of testing. As we were giving 12V directly to 6V N20's they were heating up. We used a LM2596 buck converter to convert the
+     12V to 6V.
+* 2) 
+
+
 
 # Future Implementation of Project
----
+
 Ideas for expansion of our project 
 
 1) Segway Bot , in which we can add camera ,speech recognition and self driving facility in a confined space. We can also add arms to it . So this Bot can interact with people (by recognizing their face and voice) ,can change height and  with arms can lift up objects.(Assistant Type)   
@@ -419,14 +409,14 @@ https://www.science.gov/topicpages/o/obstacle+detection+algorithm
 
 3) Multi Terrain RoBot which can change the length of individual legs based upon terrain and balance itself accordingly
 
----
+
 
 ## Contributors
 [Shreyas Patil](https://github.com/KudoC0nan)
 [Arsh Khan](https://github.com/Arsh-Khan)
 
 ## Acknowledgement and Bibliography
----
+
 Special Thanks to our Mentors [Marck Koothoor](https://github.com/marck3131) [Ayush Kaura](https://github.com/Ayush-Kaura) [Priyal](https://github.com/Pixels123priyal)
 [SRA VJTI](https://github.com/SRA-VJTI)
 https://docs.espressif.com/projects/esp-idf/en/latest/esp32/

@@ -421,6 +421,16 @@ https://www.science.gov/topicpages/o/obstacle+detection+algorithm
 
 ---
 
-# Conclusion
+## Contributors
+[Shreyas Patil](https://github.com/KudoC0nan)
+[Arsh Khan](https://github.com/Arsh-Khan)
+
+## Acknowledgement and Bibliography
 ---
+Special Thanks to our Mentors [Marck Koothoor](https://github.com/marck3131) [Ayush Kaura](https://github.com/Ayush-Kaura) [Priyal](https://github.com/Pixels123priyal)
+[SRA VJTI](https://github.com/SRA-VJTI)
+https://docs.espressif.com/projects/esp-idf/en/latest/esp32/
+https://www.youtube.com/playlist?list=PLrOFa8sDv6jcp8E3ayUFZ4iNI8uuPjXHe
+https://dspace.mit.edu/handle/1721.1/119961
+https://www.wescottdesign.com/articles/pid/pidWithoutAPhd.pdf
 

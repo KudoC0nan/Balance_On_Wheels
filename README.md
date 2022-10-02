@@ -108,7 +108,7 @@ MG90S is a micro servo motor with metal gear. This small and lightweight servo c
 [More on Servo Motor](https://github.com/KudoC0nan/Balance_On_Wheels/blob/dev_shreyas/Servo_Motor.md)
 
 
-# PWM (Pulse Width Modulation)
+## PWM (Pulse Width Modulation)
 
 **Pulse-width modulation (PWM)**, or pulse-duration modulation (PDM), is a method of reducing the average power delivered by an electrical signal, by effectively chopping it up into discrete parts.
 

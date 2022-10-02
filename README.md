@@ -413,6 +413,7 @@ https://www.science.gov/topicpages/o/obstacle+detection+algorithm
 
 ## Contributors
 [Shreyas Patil](https://github.com/KudoC0nan)
+
 [Arsh Khan](https://github.com/Arsh-Khan)
 
 ## Acknowledgement and Bibliography

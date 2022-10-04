@@ -49,9 +49,9 @@ void servo_control(void *arg)
 	{
 		set_angle_servo(&servo_a, 0);
 		vTaskDelay(100);
-		set_angle_servo(&servo_b, 70);
+		set_angle_servo(&servo_b, 105);
 		vTaskDelay(100);
-		set_angle_servo(&servo_c, 70);
+		set_angle_servo(&servo_c, 105);
 		vTaskDelay(100);
 		set_angle_servo(&servo_d, 0);
 		vTaskDelay(100);

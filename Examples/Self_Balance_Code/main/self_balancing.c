@@ -90,7 +90,7 @@ void motor_command(float abs_pitch_correction,float pitch_error,float *motor_cmd
 		set_motor_speed(MOTOR_A_1,MOTOR_BACKWARD,*motor_duty_cycle);
 	}
 	// bot us tilting downwards so motors are rotated in forward direction
-	else if(pitch_error<1)
+	else if(pitch_error<-1)
 	{
 		set_motor_speed(MOTOR_A_0,MOTOR_FORWARD,*motor_duty_cycle);
 		set_motor_speed(MOTOR_A_1,MOTOR_FORWARD,*motor_duty_cycle);

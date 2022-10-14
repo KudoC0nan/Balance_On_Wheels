@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/CMakeFiles/bootloader
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/CMakeFiles/bootloader.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/CMakeFiles/bootloader-complete.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/arsh/Balance_On_Wheels/Self_Balancing_Servo_set_zero/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

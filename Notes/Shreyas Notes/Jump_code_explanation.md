@@ -33,7 +33,5 @@ The Logic
 
 ![img](https://media.discordapp.net/attachments/1006252475629711551/1023268706685571225/IMG_20220924_215353578.jpg?width=960&height=453)
 
-Here, basically we are increasing the height of the robot in iterations rather than in a single movement. This is because, such movement woth appropriate de
-
-delays produce a thrust which pushes the bot upwards. Such thrust is not produced is a single down-up movement.
+Here, basically we are increasing the height of the robot in iterations rather than in a single movement. This is because, such movement woth appropriate delays produce a thrust which pushes the bot upwards. Such thrust is not produced is a single down-up movement.
 

@@ -74,7 +74,3 @@ void servo_config_setting()
 	xTaskCreate(&servo_control,"servo control",4096,NULL,1,NULL);
 }
 
-// void app_main()
-// {
-// 	xTaskCreatePinnedToCore(&servo_control, "servo_control", 4096, NULL, 5, NULL, 1);
-// }

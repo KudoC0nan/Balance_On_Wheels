@@ -1,4 +1,5 @@
 import math
+
 l1 = float(input("Enter L1 : "))
 l2 = float(input("Enter L2 : "))
 l3 = float(input("Enter L3 : "))

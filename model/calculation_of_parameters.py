@@ -1,9 +1,13 @@
 import math
+
 thetha1 = float(input("Enter Thetha1 "))
 thetha2 = float(input("Enter Thetha2 "))
+
 phi1 = math.pi*(thetha1)/180
 phi2 = math.pi*(thetha2)/180
+
 l3 = float(input("Enter L3 : "))
+
 val1 = l3/math.sin(phi1)
 val2 = l3/math.sin(phi2)
 

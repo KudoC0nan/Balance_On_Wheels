@@ -36,64 +36,65 @@
 
 ## <ins>File Structure
 ```
- ┣ CAD Designs                          
- ┃ ┣ Final Design for Laser Cut (3mm)                      
- ┃ ┣ Design For Laser Cut (5mm)           
- ┃ ┣ Intermediate Design              
- ┃ ┣ Prototype 2            
- ┃ ┗ Prototype                  
+👨‍💻 Balance_On_Wheels
+ ┣ 📂 CAD Designs                          
+ ┃ ┣ 📂 Final Design for Laser Cut (3mm)                      
+ ┃ ┣ 📂 Design For Laser Cut (5mm)           
+ ┃ ┣ 📂 Intermediate Design              
+ ┃ ┣ 📂 Prototype 2            
+ ┃ ┗ 📂 Prototype                  
  ┃  
- ┣ Examples                      
- ┃ ┣ Jump Code
- ┃ ┣ Mpu Readings Code
- ┃ ┣ Mpu Readings and Servo Rotation Code
- ┃ ┣ Printing Info on terminal using Wifi Code                     
- ┃ ┣ Self Balancing Code
- ┃ ┣ Self Balance Servo set zero Code
- ┃ ┣ Variable Height Code
- ┃ ┗ OLED Code
+ ┣ 📂 Examples                      
+ ┃ ┣ 📜 Jump Code
+ ┃ ┣ 📜 Mpu Readings Code
+ ┃ ┣ 📜 Mpu Readings and Servo Rotation Code
+ ┃ ┣ 📜 Printing Info on terminal using Wifi Code                     
+ ┃ ┣ 📜 Self Balancing Code
+ ┃ ┣ 📜 Self Balance Servo set zero Code
+ ┃ ┣ 📜 Variable Height Code
+ ┃ ┗ 📜 OLED Code
  ┃
- ┣ Assets                          
+ ┣ 📂 Assets                          
  ┃
- ┣ Notes
- ┃  ┣ Arsh Notes
- ┃  ┗ Shreyas Notes  
+ ┣ 📂 Notes
+ ┃  ┣ 📂 Arsh Notes
+ ┃  ┗ 📂 Shreyas Notes  
  ┃
- ┣ Model 
- ┃ ┣ calculation_of_parameters.py
- ┃ ┣ calculation_of_angle_from_parameters.py
- ┃ ┗ graph.ipynb
+ ┣ 📂 Model 
+ ┃ ┣ 📜 calculation_of_parameters.py
+ ┃ ┣ 📜 calculation_of_angle_from_parameters.py
+ ┃ ┗ 📜 graph.ipynb
  ┃
- ┣ Components
- ┃ ┣ sra-board-component
- ┃ ┗ rosserial_esp32 
+ ┣ 📂 Components
+ ┃ ┣ 📂 sra-board-component
+ ┃ ┗ 📂 rosserial_esp32 
  ┃ 
- ┣ firmware                               
- ┃ ┗ Self_Balancing_Servo_Lock_Jumping
- ┃   ┣ components
- ┃   ┃ ┣ include
- ┃   ┃ ┃ ┣ websocket_server.h
- ┃   ┃ ┃ ┗  websocket.h
- ┃   ┃ ┣ CMakeLists.txt  
- ┃   ┃ ┣ Kconfig
- ┃   ┃ ┣ websocket_server.c
- ┃   ┃ ┗ websocket.c     
- ┃   ┣ frontend
- ┃   ┃ ┗ index.html
- ┃   ┣ main 
- ┃   ┃ ┣ include
- ┃   ┃ ┃ ┣ tuning_websocket_server.h
- ┃   ┃ ┃ ┗ wifi_handler.h
- ┃   ┃ ┣ CMakeLists.txt  
- ┃   ┃ ┣ Kconfig
- ┃   ┃ ┣ self_balancing.c 
- ┃   ┃ ┣ servo_set.c
- ┃   ┃ ┣ jump.c
- ┃   ┃ ┣ tuning_websocket_server.c
- ┃   ┃ ┗ wifi_handler.c
- ┃   ┣ CMakeLists.txt
- ┃   ┗ sdkconfig
- ┗ README.md
+ ┣ 📂firmware                               
+ ┃ ┗ 📂 Self_Balancing_Variable_Height
+ ┃   ┣ 📂 components
+ ┃   ┃ ┣ 📂 include
+ ┃   ┃ ┃ ┣ 📜 websocket_server.h
+ ┃   ┃ ┃ ┗ 📜 websocket.h
+ ┃   ┃ ┣ 📜 CMakeLists.txt  
+ ┃   ┃ ┣ 📜 Kconfig
+ ┃   ┃ ┣ 📜 websocket_server.c
+ ┃   ┃ ┗ 📜 websocket.c     
+ ┃   ┣ 📂 frontend
+ ┃   ┃ ┗ 📜 index.html
+ ┃   ┣ 📂 main 
+ ┃   ┃ ┣ 📂 include
+ ┃   ┃ ┃ ┣ 📜 tuning_websocket_server.h
+ ┃   ┃ ┃ ┗ 📜 wifi_handler.h
+ ┃   ┃ ┣ 📜 CMakeLists.txt  
+ ┃   ┃ ┣ 📜 Kconfig
+ ┃   ┃ ┣ 📜 self_balancing.c 
+ ┃   ┃ ┣ 📜 servo_set.c
+ ┃   ┃ ┣ 📜 jump.c
+ ┃   ┃ ┣ 📜 tuning_websocket_server.c
+ ┃   ┃ ┗ 📜 wifi_handler.c
+ ┃   ┣ 📜 CMakeLists.txt
+ ┃   ┗ 📜 sdkconfig
+ ┗ 📜 README.md
 ```
 ---
 # <ins>Getting Started
@@ -114,7 +115,7 @@
 
 1. Clone the Repository 
     
-  ```git clone git@github.com:KudoC0nan/Balance_On_Wheels.git```
+    > ```git clone git@github.com:KudoC0nan/Balance_On_Wheels.git```
 
 2. Install ESP-IDF on your System
     
@@ -130,35 +131,35 @@
 
 3. Goto The Repository 
     
-   ```cd Balance_On_Wheels```
+   > ```cd Balance_On_Wheels```
 
 4. Goto firmware folder
  
-   ```cd firmware```
+   > ```cd firmware```
 
 5. Goto Self Balancing Code at Minimum Height
     
-   ```cd Self_Balancing_Servo_Lock_Jumping```
+   > ```cd Self_Balancing_Variable_Height```
 
 6. Run Command for Building the Code
    
-    ```idf.py build ```
+   >  ```idf.py build ```
 
 7. Run Command for Opening the Configurations Tab to Setup the WIFI.
  
-    ```idf.py menuconfig```
- 
-  When running the above command it will open a Configurations tab.
- 
-  Then select ```Component Config``` option.
- 
-  Then search for ```Wall-E Configurations``` and select this option.
- 
-  Then select ```Wifi Config``` option.
+   >  ```idf.py menuconfig```
+
+    When running the above command it will open a Configurations tab.
+
+    Then select ```Component Config``` option.
+
+    Then search for ```Wall-E Configurations``` and select this option.
+
+    Then select ```Wifi Config``` option.
  
 8. Run Command on Flashing the Code on our Bot.
     
-    ```idf.py flash monitor```
+   > ```idf.py flash monitor```
  
 ---
 # <ins>Theory And Approach
@@ -246,6 +247,10 @@ This means that small changes in motor angle cause a large amount of leg extensi
     $\phi$ 2 = $15{\textdegree}$
 
     </font>
+    
+ * **Hardware Bot**
+   
+    ![](https://github.com/KudoC0nan/Balance_On_Wheels/blob/main/assets/Balance_On_Wheels.jpeg)
 
 
 ## <ins> Components
@@ -281,7 +286,7 @@ For self balancing our bot should be able to minimize pitch error ,i.e, differen
  Sometimes applied Force is not enough to bring the error to zero (bot is in steady state),to correct this error, we use I-term, which will increase    
  force as the time passes and will correct the steady state error. 
 
- > :memo: **Note:** [More on PID Explanation](https://github.com/KudoC0nan/Balance_On_Wheels/blob/Develop/Notes/Arsh%20Notes/PID%20Explanation)
+ > :memo: **Note:** [More on PID Explanation](https://github.com/KudoC0nan/Balance_On_Wheels/blob/main/Notes/Arsh%20Notes/PID%20Explanation.md)
 
 ## <ins> Code Phase
 
@@ -290,6 +295,8 @@ For self balancing our bot should be able to minimize pitch error ,i.e, differen
   For self-balancing the bot, we need to keep the bot a bit above our desired angle (Setpoint), since the bot is very fast and will fall down once it's past the desired angle.
 
   The pitch angle is required for Self-Balancing which is obtained from the Inertial Measurement Unit(IMU sensor) plug-in.
+  
+  ![](https://i.imgur.com/cQmhDEx.png)
 
   > :memo: **Note:**[Link to Explanation of Self Balancing Code](https://github.com/KudoC0nan/Balance_On_Wheels/blob/Develop/Notes/Arsh%20Notes/Self%20Balancing%20Code.md)
 
@@ -297,86 +304,109 @@ For self balancing our bot should be able to minimize pitch error ,i.e, differen
 
   [Link to Code](https://github.com/KudoC0nan/Balance_On_Wheels/tree/Develop/Examples/Variable_Height_Code)
 
-* After that we wrote the code of integrating Self Balancing Code with servos locking up at minimum height for Self Balancing of Bot at Minimum Height.
-PID is used for balancing along with servo set zero which servos lock the bot in minimum height simultaneously so that the bot can remain stable at that position or otherwise the bot may collapse. Also before Balancing the bot we set servo zero first and then the self balancing code starts to function.
+* After that we wrote the code of integrating Self Balancing Code with servos locking up at Minimum Height or Maximum Height for Self Balancing of Bot. PID is used for balancing along with servo set zero which servos lock the bot in minimum height or maximum height simultaneously so that the bot can remain stable at that position or otherwise the bot may collapse. Also before Balancing the bot we set servo zero first and then the self balancing code starts to function.
 
   [Link to Code](https://github.com/KudoC0nan/Balance_On_Wheels/tree/Develop/Examples/Self_Balance_Servo_SetZero)
 
-  **Flow Chart of Code**
   
-   ![](https://i.imgur.com/n4e01mY.png)
+   ![](https://i.imgur.com/bHB0heS.jpg)
 
 * After Which we wrote the Jumping Code for Bot to Jump from Minimum Position.
   
   ![](https://camo.githubusercontent.com/c6bec6da97ed148470ad69aaec32fd8a89f65f68002f9bfc26a169f85f7a249e/68747470733a2f2f6d656469612e646973636f72646170702e6e65742f6174746163686d656e74732f313030363235323437353632393731313535312f313032333236383730363638353537313232352f494d475f32303232303932345f3231353335333537382e6a70673f77696474683d393630266865696768743d343533)
  
-  Here, basically we are increasing the Height of the Robot in iterations rather than in a single movement. This is because, such movement with appropriate  delays produce a thrust which pushes the bot upwards. Such thrust is not produced is a single down-up movement.
+  Here, basically we are increasing the Height of the Robot in iterations rather than in a single movement.
+  
+  This is because, such movement with appropriate  delays produce a thrust which pushes the bot upwards. 
+  
+  Such thrust is not produced is a single down-up movement.
  
   > :memo: **Note:**[Link to Explanation of Jump Code](https://github.com/KudoC0nan/Balance_On_Wheels/blob/Develop/Notes/Shreyas%20Notes/Jump_code_explanation.md)
  
    [Link to Code](https://github.com/KudoC0nan/Balance_On_Wheels/tree/Develop/Examples/Jump_Code)
 
-* After finally we wrote the code for integration of Jumping Code with Self Balancing Code.
+* After finally we wrote the code for Self Balancing at Variable Height, which is self balance algorithm integrated with servo movement from maximum to     minimum position (Variable Height). 
 
-  [Link to Code]()
+  [Link to Code](https://github.com/KudoC0nan/Balance_On_Wheels/tree/main/firmware/Self_Balance_Variable_Height)
 
 ---
 ## <ins>Results and Demo
-
-* **OLED Demonstration**
- [![Oled Code](https://res.cloudinary.com/marcomontalbano/image/upload/v1665237564/video_to_markdown/images/video--bca3bd041dba9b3d700c9c021613d27f-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://i.imgur.com/AXOw94k.mp4 "Oled Code")
  
 * **Bot moving from Min to Max Height**
   
-  [![Servo movement from max height to min](https://res.cloudinary.com/marcomontalbano/image/upload/v1665227522/video_to_markdown/images/video--2fc68c8adef49d92d4c48957409f9845-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://i.imgur.com/x1DZ9R9.mp4 "Servo movement from max height to min") 
-
+   https://user-images.githubusercontent.com/96683880/196004139-138138a3-84b0-4989-8c16-53ab157d4e62.mp4
 
 * **Bot given forward velocity when castor attached**
-[![Forward Velocity with castor ](https://res.cloudinary.com/marcomontalbano/image/upload/v1665225392/video_to_markdown/images/video--21e8f079837b8e2fc0c235660fa8e0f3-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://i.imgur.com/HnTzFTZ.mp4 "Forward Velocity with castor ")
+
+   https://user-images.githubusercontent.com/96683880/196004173-e0cb206d-ad12-4c40-96d6-4af0906ef298.mp4
+
 
 * **Self Balancing Code with servos locking up at minimum height**
 
-  [![Self Balancing](https://res.cloudinary.com/marcomontalbano/image/upload/v1665223839/video_to_markdown/images/video--c4e503c35718a098a8a9aa508368f321-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://i.imgur.com/5cLTLLT.mp4 "Self Balancing")
+    https://user-images.githubusercontent.com/96683880/196004201-1c1e7248-87ce-4559-8f53-c9f6e9090402.mp4
+
 
 * **Self Balancing Code with servos locking up at maximum height**
 
-  [![Self Balancing at Max Height](https://res.cloudinary.com/marcomontalbano/image/upload/v1665224845/video_to_markdown/images/video--90b7d7dd7a19ac7ebda929b3f229c663-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://i.imgur.com/0afDTOF.mp4 "Self Balancing at Max Height")
+    https://user-images.githubusercontent.com/96683880/196004209-194cee07-17d1-4039-a54f-a8d847689260.mp4
+
+
+* **Self Balancing Code with servos locking up at medium height**
+
+    https://user-images.githubusercontent.com/96683880/196004515-5f775ec8-a39e-4e45-b562-e37411ff56e7.mp4
+
 
 * **Jumping of Robot**
 
-  [![Video](https://res.cloudinary.com/marcomontalbano/image/upload/v1665222817/video_to_markdown/images/video--7fc84c42adbc8697c5772e110ad04cbf-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://i.imgur.com/9ucrqm1.mp4 "Video")
+    https://user-images.githubusercontent.com/96683880/196004224-312e2e7b-c288-44fc-8df3-6564f7bd02a5.mp4
 
-* **Self Balancing and Jumping Bot**  
+
+* **Self Balancing at Variable Height**
+
+    https://user-images.githubusercontent.com/96683880/196004247-72f6e5f4-fca4-483e-97d6-66e2e4112905.mp4
+
+
 --- 
 ## <ins>Future Work
 
-1) Multi Terrain RoBot (changes length of legs based upon terrain and balance itself)
+1) Movement on uneven terrains like stairs using jump.
  
-2) Implementing Positional control using LQR and roll stabilization.
- 
-3) Segway Bot (Assistant Type Robot)
-    
-   https://techcrunch.com/2016/01/07/segway-has-created-a-robot-that-connects-to-your-two-wheeled-scooter/
+2) Implementation of LQR controller for balancing and position control
 
-4) For obstacle avoiding (using Ultrasonic sensors or Lidar and Computer Vision) 
+3) Implementation of Roll Stabilization
+ 
+4) Segway Bot ([Assistant Type Robot](
+   https://techcrunch.com/2016/01/07/segway-has-created-a-robot-that-connects-to-your-two-wheeled-scooter/
+))
     
-   https://www.science.gov/topicpages/o/obstacle+detection+algorithm
+5) For obstacle avoiding (using Ultrasonic sensors or Lidar and Computer Vision) 
+    
+    [Link to Algorithm](https://www.science.gov/topicpages/o/obstacle+detection+algorithm)
 
 ---
 
 ## <ins>Troubleshooting
 
-1. Mounting of motors at wheel joint.
-    
-2. Gears, were removed from the design, considering much was lost due to the gear mechanism. Instead, MG90s servos were used.
+1. Mounting of motors at wheel joint. As we were using BO motors wheels, we weren't able to use for our N20 motors. The fix was we designed a mount in Solidworks and 3D printed that mount.  
+
+
+2. In the Original Design of our Bot, Gears were used. But then Gears were removed from the design, considering much torque was lost due to the gear mechanism. Instead, MG90s servos were used.
+
 
 3. Length of legs and distance from the AOS were reconsidered many times.
 
-4. Base plate of the bot had some design flaws regarding placement of holes for servos and mpu.
 
-5. No holes made in Base plate to for Castor Wheels (castor wheel used for experimental purposes like checking torque and rpm of motors in forward and backward direction) 
+4. Base plate of the bot had some design flaws regarding placement of holes for Servos and Mpu. Currently we have made holes manually by Drilling and the changes has been made in CAD Design.
 
-6. N20 heating up within few moments of testing. As we were giving 12V directly to 6V N20's they were heating up. We used a LM2596 buck converter to convert the 12V to 6V.
+
+5. No holes made in Base plate to for Castor Wheels (castor wheel used for experimental purposes like checking torque and rpm of motors in forward and backward direction). Currently we have made holes manually by Drilling and the changes has been made in CAD Design.
+
+
+6. N20 heating up within a few moments of testing. As we were giving 12V directly to 6V N20's due to which they were heating up. To fix this issue ,we used a LM2596 buck converter to convert the 12V to 6V.
+ 
+
+7. During a few tests of Jumping, we found that the MG90 Servo gears either got broken or got misaligned due to high strain (sudden Jerk) on it during jumping. To fix this issue, we opened the Servos and tried fixing it and if the gear was completely broken we had to replace it with spare Mg90 servos or in worst case used Sg90 servos until the workaround is found or to perform some other tasks.
+
 
 ---
 
